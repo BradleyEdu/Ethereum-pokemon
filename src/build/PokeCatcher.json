@@ -1,0 +1,2152 @@
+{
+  "contractName": "PokeCatcher",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokemonName",
+          "type": "string"
+        }
+      ],
+      "name": "capture",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokemonName",
+          "type": "string"
+        }
+      ],
+      "name": "isOwned",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokemonName",
+          "type": "string"
+        }
+      ],
+      "name": "getOwned",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokemonName\",\"type\":\"string\"}],\"name\":\"capture\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokemonName\",\"type\":\"string\"}],\"name\":\"getOwned\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokemonName\",\"type\":\"string\"}],\"name\":\"isOwned\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"capture(string)\":{\"notice\":\"Capturar\"},\"getOwned(string)\":{\"notice\":\"Obtener al due\\u00f1o\"},\"isOwned(string)\":{\"notice\":\"Verificar si ha sido capturado\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Migrations.sol\":\"PokeCatcher\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Migrations.sol\":{\"keccak256\":\"0xcadd1b254e008a8d9b627d2fa3d5e76cfbc8d9cb529c864cd9a73dce0990216f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b24a6a642985864f6a022df6b88593530fd34608341c56e8e8ec76c33c53919a\",\"dweb:/ipfs/QmUPmr5hrnZE3HhigBKPA36vkdYKmQwGqrDM9FGo4en2wo\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506106a8806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806302273f671461004657806358f9ab541461017a578063bc055ae51461025f575b600080fd5b6100ff6004803603602081101561005c57600080fd5b810190808035906020019064010000000081111561007957600080fd5b82018360208201111561008b57600080fd5b803590602001918460018302840111640100000000831117156100ad57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610330565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013f578082015181840152602081019050610124565b50505050905090810190601f16801561016c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102336004803603602081101561019057600080fd5b81019080803590602001906401000000008111156101ad57600080fd5b8201836020820111156101bf57600080fd5b803590602001918460018302840111640100000000831117156101e157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061053a565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6103186004803603602081101561027557600080fd5b810190808035906020019064010000000081111561029257600080fd5b8201836020820111156102a457600080fd5b803590602001918460018302840111640100000000831117156102c657600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506105cf565b60405180821515815260200191505060405180910390f35b60606000826040518082805190602001908083835b602083106103685780518252602082019150602081019050602083039250610345565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160149054906101000a900460ff1615610402576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806106526021913960400191505060405180910390fd5b336000836040518082805190602001908083835b602083106104395780518252602082019150602081019050602083039250610416565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060016000836040518082805190602001908083835b602083106104e557805182526020820191506020810190506020830392506104c2565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160146101000a81548160ff021916908315150217905550819050919050565b600080826040518082805190602001908083835b60208310610571578051825260208201915060208101905060208303925061054e565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600080826040518082805190602001908083835b6020831061060657805182526020820191506020810190506020830392506105e3565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160149054906101000a900460ff16905091905056fe4573746520506f6b656d6f6e207961206861207369646f2063617074757261646fa2646970667358221220bffd6fcac7b68e262589bdeac1b50c198a5d34eacbfdcbf9bdc4d3961b01caf464736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806302273f671461004657806358f9ab541461017a578063bc055ae51461025f575b600080fd5b6100ff6004803603602081101561005c57600080fd5b810190808035906020019064010000000081111561007957600080fd5b82018360208201111561008b57600080fd5b803590602001918460018302840111640100000000831117156100ad57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610330565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013f578082015181840152602081019050610124565b50505050905090810190601f16801561016c5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102336004803603602081101561019057600080fd5b81019080803590602001906401000000008111156101ad57600080fd5b8201836020820111156101bf57600080fd5b803590602001918460018302840111640100000000831117156101e157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061053a565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6103186004803603602081101561027557600080fd5b810190808035906020019064010000000081111561029257600080fd5b8201836020820111156102a457600080fd5b803590602001918460018302840111640100000000831117156102c657600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506105cf565b60405180821515815260200191505060405180910390f35b60606000826040518082805190602001908083835b602083106103685780518252602082019150602081019050602083039250610345565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160149054906101000a900460ff1615610402576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806106526021913960400191505060405180910390fd5b336000836040518082805190602001908083835b602083106104395780518252602082019150602081019050602083039250610416565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060016000836040518082805190602001908083835b602083106104e557805182526020820191506020810190506020830392506104c2565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160146101000a81548160ff021916908315150217905550819050919050565b600080826040518082805190602001908083835b60208310610571578051825260208201915060208101905060208303925061054e565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600080826040518082805190602001908083835b6020831061060657805182526020820191506020810190506020830392506105e3565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160149054906101000a900460ff16905091905056fe4573746520506f6b656d6f6e207961206861207369646f2063617074757261646fa2646970667358221220bffd6fcac7b68e262589bdeac1b50c198a5d34eacbfdcbf9bdc4d3961b01caf464736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "57:860:0:-:0;;;206:23;;;;;;;;;;57:860;;;;;;",
+  "deployedSourceMap": "57:860:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;339:276;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;796:119;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;654:115;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;339:276;399:13;428:9;438:11;428:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;427:29;419:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;536:10;505:9;515:11;505:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:28;;;:41;;;;;;;;;;;;;;;;;;583:4;552:9;562:11;552:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:28;;;:35;;;;;;;;;;;;;;;;;;599:11;592:18;;339:276;;;:::o;796:119::-;861:7;882:9;892:11;882:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;875:35;;796:119;;;:::o;654:115::-;718:4;736:9;746:11;736:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:28;;;;;;;;;;;;729:35;;654:115;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.6.12;\n\ncontract PokeCatcher {\n  //Variables\n  struct Owner{\n    address owner;\n    bool owned;\n  }\n  mapping(string => Owner) ownership;\n\n  //Constructor\n  constructor() public {}\n\n  //Metodos\n\n  /* function <nombre> (<parametros>) <acceso> <visibilidad> <tipo retorno>*/\n\n  ///Capturar\n  function capture(string memory pokemonName) public returns (string memory){\n    require(!ownership[pokemonName].owned, \"Este Pokemon ya ha sido capturado\");\n    \n    ownership[pokemonName].owner = msg.sender;\n    ownership[pokemonName].owned = true;\n\n  return pokemonName;\n  }\n  ///Verificar si ha sido capturado\n  function isOwned(string memory pokemonName) public view returns(bool){\n    return ownership[pokemonName].owned;\n  }\n\n  ///Obtener al dueño\n  function getOwned(string memory pokemonName) public view returns(address){\n    return ownership[pokemonName].owner;\n  }\n}\n",
+  "sourcePath": "C:\\Users\\bradl\\Desktop\\ethereum-pokemon-catcher\\contracts\\Migrations.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Migrations.sol",
+    "exportedSymbols": {
+      "PokeCatcher": [
+        78
+      ]
+    },
+    "id": 79,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 78,
+        "linearizedBaseContracts": [
+          78
+        ],
+        "name": "PokeCatcher",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PokeCatcher.Owner",
+            "id": 6,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "mutability": "mutable",
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6,
+                "src": "114:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:7:0",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 5,
+                "mutability": "mutable",
+                "name": "owned",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 6,
+                "src": "133:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "133:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Owner",
+            "nodeType": "StructDefinition",
+            "scope": 78,
+            "src": "96:52:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 10,
+            "mutability": "mutable",
+            "name": "ownership",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 78,
+            "src": "151:34:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+              "typeString": "mapping(string => struct PokeCatcher.Owner)"
+            },
+            "typeName": {
+              "id": 9,
+              "keyType": {
+                "id": 7,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "159:6:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "151:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                "typeString": "mapping(string => struct PokeCatcher.Owner)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 8,
+                "name": "Owner",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 6,
+                "src": "169:5:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Owner_$6_storage_ptr",
+                  "typeString": "struct PokeCatcher.Owner"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13,
+              "nodeType": "Block",
+              "src": "227:2:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 14,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "217:2:0"
+            },
+            "returnParameters": {
+              "id": 12,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "227:0:0"
+            },
+            "scope": 78,
+            "src": "206:23:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 48,
+              "nodeType": "Block",
+              "src": "413:202:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 27,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "427:29:0",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 23,
+                              "name": "ownership",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 10,
+                              "src": "428:9:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                                "typeString": "mapping(string memory => struct PokeCatcher.Owner storage ref)"
+                              }
+                            },
+                            "id": 25,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 24,
+                              "name": "pokemonName",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 17,
+                              "src": "438:11:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "428:22:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_Owner_$6_storage",
+                              "typeString": "struct PokeCatcher.Owner storage ref"
+                            }
+                          },
+                          "id": 26,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "owned",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 5,
+                          "src": "428:28:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4573746520506f6b656d6f6e207961206861207369646f2063617074757261646f",
+                        "id": 28,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "458:35:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_a6c1f06e4a663cfc33c22818f4ac7108fabf6c29e2e4b134a9ea87693f4e25b1",
+                          "typeString": "literal_string \"Este Pokemon ya ha sido capturado\""
+                        },
+                        "value": "Este Pokemon ya ha sido capturado"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_a6c1f06e4a663cfc33c22818f4ac7108fabf6c29e2e4b134a9ea87693f4e25b1",
+                          "typeString": "literal_string \"Este Pokemon ya ha sido capturado\""
+                        }
+                      ],
+                      "id": 22,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "419:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 29,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "419:75:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 30,
+                  "nodeType": "ExpressionStatement",
+                  "src": "419:75:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 37,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 31,
+                          "name": "ownership",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10,
+                          "src": "505:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                            "typeString": "mapping(string memory => struct PokeCatcher.Owner storage ref)"
+                          }
+                        },
+                        "id": 33,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 32,
+                          "name": "pokemonName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "515:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "505:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Owner_$6_storage",
+                          "typeString": "struct PokeCatcher.Owner storage ref"
+                        }
+                      },
+                      "id": 34,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 3,
+                      "src": "505:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "536:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 36,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "536:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "505:41:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 38,
+                  "nodeType": "ExpressionStatement",
+                  "src": "505:41:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 39,
+                          "name": "ownership",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10,
+                          "src": "552:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                            "typeString": "mapping(string memory => struct PokeCatcher.Owner storage ref)"
+                          }
+                        },
+                        "id": 41,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 40,
+                          "name": "pokemonName",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 17,
+                          "src": "562:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "552:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Owner_$6_storage",
+                          "typeString": "struct PokeCatcher.Owner storage ref"
+                        }
+                      },
+                      "id": 42,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owned",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5,
+                      "src": "552:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 43,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "583:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "552:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 45,
+                  "nodeType": "ExpressionStatement",
+                  "src": "552:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 46,
+                    "name": "pokemonName",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 17,
+                    "src": "599:11:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "functionReturnParameters": 21,
+                  "id": 47,
+                  "nodeType": "Return",
+                  "src": "592:18:0"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 15,
+              "nodeType": "StructuredDocumentation",
+              "src": "325:11:0",
+              "text": "Capturar"
+            },
+            "functionSelector": "02273f67",
+            "id": 49,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "capture",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 18,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 17,
+                  "mutability": "mutable",
+                  "name": "pokemonName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "356:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 16,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "356:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "355:27:0"
+            },
+            "returnParameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 49,
+                  "src": "399:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 19,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "399:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "398:15:0"
+            },
+            "scope": 78,
+            "src": "339:276:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 62,
+              "nodeType": "Block",
+              "src": "723:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 57,
+                        "name": "ownership",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "736:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                          "typeString": "mapping(string memory => struct PokeCatcher.Owner storage ref)"
+                        }
+                      },
+                      "id": 59,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 58,
+                        "name": "pokemonName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "746:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "736:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Owner_$6_storage",
+                        "typeString": "struct PokeCatcher.Owner storage ref"
+                      }
+                    },
+                    "id": 60,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "owned",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 5,
+                    "src": "736:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 56,
+                  "id": 61,
+                  "nodeType": "Return",
+                  "src": "729:35:0"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 50,
+              "nodeType": "StructuredDocumentation",
+              "src": "618:33:0",
+              "text": "Verificar si ha sido capturado"
+            },
+            "functionSelector": "bc055ae5",
+            "id": 63,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOwned",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "mutability": "mutable",
+                  "name": "pokemonName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 63,
+                  "src": "671:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "671:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "670:27:0"
+            },
+            "returnParameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 63,
+                  "src": "718:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "718:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "717:6:0"
+            },
+            "scope": 78,
+            "src": "654:115:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 76,
+              "nodeType": "Block",
+              "src": "869:46:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "ownership",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10,
+                        "src": "882:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_Owner_$6_storage_$",
+                          "typeString": "mapping(string memory => struct PokeCatcher.Owner storage ref)"
+                        }
+                      },
+                      "id": 73,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "pokemonName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 66,
+                        "src": "892:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "882:22:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Owner_$6_storage",
+                        "typeString": "struct PokeCatcher.Owner storage ref"
+                      }
+                    },
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "owner",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 3,
+                    "src": "882:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 70,
+                  "id": 75,
+                  "nodeType": "Return",
+                  "src": "875:35:0"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 64,
+              "nodeType": "StructuredDocumentation",
+              "src": "773:20:0",
+              "text": "Obtener al dueño"
+            },
+            "functionSelector": "58f9ab54",
+            "id": 77,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOwned",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 66,
+                  "mutability": "mutable",
+                  "name": "pokemonName",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 77,
+                  "src": "814:25:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "814:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "813:27:0"
+            },
+            "returnParameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 69,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 77,
+                  "src": "861:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "861:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "860:9:0"
+            },
+            "scope": 78,
+            "src": "796:119:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 79,
+        "src": "57:860:0"
+      }
+    ],
+    "src": "32:886:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Migrations.sol",
+      "exportedSymbols": {
+        "PokeCatcher": [
+          78
+        ]
+      },
+      "license": "MIT"
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:23:0"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            78
+          ],
+          "name": "PokeCatcher",
+          "scope": 79
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "PokeCatcher.Owner",
+              "name": "Owner",
+              "scope": 78,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "overrides": null,
+                  "scope": 6,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "114:7:0"
+                  }
+                ],
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "114:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "mutability": "mutable",
+                  "name": "owned",
+                  "overrides": null,
+                  "scope": 6,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "133:4:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "133:10:0"
+              }
+            ],
+            "id": 6,
+            "name": "StructDefinition",
+            "src": "96:52:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "mutability": "mutable",
+              "name": "ownership",
+              "overrides": null,
+              "scope": 78,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(string => struct PokeCatcher.Owner)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(string => struct PokeCatcher.Owner)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "159:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Owner",
+                      "referencedDeclaration": 6,
+                      "type": "struct PokeCatcher.Owner"
+                    },
+                    "id": 8,
+                    "name": "UserDefinedTypeName",
+                    "src": "169:5:0"
+                  }
+                ],
+                "id": 9,
+                "name": "Mapping",
+                "src": "151:24:0"
+              }
+            ],
+            "id": 10,
+            "name": "VariableDeclaration",
+            "src": "151:34:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "overrides": null,
+              "scope": 78,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 11,
+                "name": "ParameterList",
+                "src": "217:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 12,
+                "name": "ParameterList",
+                "src": "227:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 13,
+                "name": "Block",
+                "src": "227:2:0"
+              }
+            ],
+            "id": 14,
+            "name": "FunctionDefinition",
+            "src": "206:23:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "02273f67",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "capture",
+              "overrides": null,
+              "scope": 78,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "Capturar"
+                },
+                "id": 15,
+                "name": "StructuredDocumentation",
+                "src": "325:11:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pokemonName",
+                      "overrides": null,
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 16,
+                        "name": "ElementaryTypeName",
+                        "src": "356:6:0"
+                      }
+                    ],
+                    "id": 17,
+                    "name": "VariableDeclaration",
+                    "src": "356:25:0"
+                  }
+                ],
+                "id": 18,
+                "name": "ParameterList",
+                "src": "355:27:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 49,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 19,
+                        "name": "ElementaryTypeName",
+                        "src": "399:6:0"
+                      }
+                    ],
+                    "id": 20,
+                    "name": "VariableDeclaration",
+                    "src": "399:13:0"
+                  }
+                ],
+                "id": 21,
+                "name": "ParameterList",
+                "src": "398:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "tryCall": false,
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_a6c1f06e4a663cfc33c22818f4ac7108fabf6c29e2e4b134a9ea87693f4e25b1",
+                                  "typeString": "literal_string \"Este Pokemon ya ha sido capturado\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 22,
+                            "name": "Identifier",
+                            "src": "419:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!",
+                              "prefix": true,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "owned",
+                                  "referencedDeclaration": 5,
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct PokeCatcher.Owner storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 10,
+                                          "type": "mapping(string memory => struct PokeCatcher.Owner storage ref)",
+                                          "value": "ownership"
+                                        },
+                                        "id": 23,
+                                        "name": "Identifier",
+                                        "src": "428:9:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 17,
+                                          "type": "string memory",
+                                          "value": "pokemonName"
+                                        },
+                                        "id": 24,
+                                        "name": "Identifier",
+                                        "src": "438:11:0"
+                                      }
+                                    ],
+                                    "id": 25,
+                                    "name": "IndexAccess",
+                                    "src": "428:22:0"
+                                  }
+                                ],
+                                "id": 26,
+                                "name": "MemberAccess",
+                                "src": "428:28:0"
+                              }
+                            ],
+                            "id": 27,
+                            "name": "UnaryOperation",
+                            "src": "427:29:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4573746520506f6b656d6f6e207961206861207369646f2063617074757261646f",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Este Pokemon ya ha sido capturado\"",
+                              "value": "Este Pokemon ya ha sido capturado"
+                            },
+                            "id": 28,
+                            "name": "Literal",
+                            "src": "458:35:0"
+                          }
+                        ],
+                        "id": 29,
+                        "name": "FunctionCall",
+                        "src": "419:75:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "ExpressionStatement",
+                    "src": "419:75:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "owner",
+                              "referencedDeclaration": 3,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct PokeCatcher.Owner storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 10,
+                                      "type": "mapping(string memory => struct PokeCatcher.Owner storage ref)",
+                                      "value": "ownership"
+                                    },
+                                    "id": 31,
+                                    "name": "Identifier",
+                                    "src": "505:9:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 17,
+                                      "type": "string memory",
+                                      "value": "pokemonName"
+                                    },
+                                    "id": 32,
+                                    "name": "Identifier",
+                                    "src": "515:11:0"
+                                  }
+                                ],
+                                "id": 33,
+                                "name": "IndexAccess",
+                                "src": "505:22:0"
+                              }
+                            ],
+                            "id": 34,
+                            "name": "MemberAccess",
+                            "src": "505:28:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": -15,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 35,
+                                "name": "Identifier",
+                                "src": "536:3:0"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "MemberAccess",
+                            "src": "536:10:0"
+                          }
+                        ],
+                        "id": 37,
+                        "name": "Assignment",
+                        "src": "505:41:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "ExpressionStatement",
+                    "src": "505:41:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "owned",
+                              "referencedDeclaration": 5,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct PokeCatcher.Owner storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 10,
+                                      "type": "mapping(string memory => struct PokeCatcher.Owner storage ref)",
+                                      "value": "ownership"
+                                    },
+                                    "id": 39,
+                                    "name": "Identifier",
+                                    "src": "552:9:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 17,
+                                      "type": "string memory",
+                                      "value": "pokemonName"
+                                    },
+                                    "id": 40,
+                                    "name": "Identifier",
+                                    "src": "562:11:0"
+                                  }
+                                ],
+                                "id": 41,
+                                "name": "IndexAccess",
+                                "src": "552:22:0"
+                              }
+                            ],
+                            "id": 42,
+                            "name": "MemberAccess",
+                            "src": "552:28:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 43,
+                            "name": "Literal",
+                            "src": "583:4:0"
+                          }
+                        ],
+                        "id": 44,
+                        "name": "Assignment",
+                        "src": "552:35:0"
+                      }
+                    ],
+                    "id": 45,
+                    "name": "ExpressionStatement",
+                    "src": "552:35:0"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 21
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 17,
+                          "type": "string memory",
+                          "value": "pokemonName"
+                        },
+                        "id": 46,
+                        "name": "Identifier",
+                        "src": "599:11:0"
+                      }
+                    ],
+                    "id": 47,
+                    "name": "Return",
+                    "src": "592:18:0"
+                  }
+                ],
+                "id": 48,
+                "name": "Block",
+                "src": "413:202:0"
+              }
+            ],
+            "id": 49,
+            "name": "FunctionDefinition",
+            "src": "339:276:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "bc055ae5",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "isOwned",
+              "overrides": null,
+              "scope": 78,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "Verificar si ha sido capturado"
+                },
+                "id": 50,
+                "name": "StructuredDocumentation",
+                "src": "618:33:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pokemonName",
+                      "overrides": null,
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "671:6:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "671:25:0"
+                  }
+                ],
+                "id": 53,
+                "name": "ParameterList",
+                "src": "670:27:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 63,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 54,
+                        "name": "ElementaryTypeName",
+                        "src": "718:4:0"
+                      }
+                    ],
+                    "id": 55,
+                    "name": "VariableDeclaration",
+                    "src": "718:4:0"
+                  }
+                ],
+                "id": 56,
+                "name": "ParameterList",
+                "src": "717:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 56
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "owned",
+                          "referencedDeclaration": 5,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct PokeCatcher.Owner storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(string memory => struct PokeCatcher.Owner storage ref)",
+                                  "value": "ownership"
+                                },
+                                "id": 57,
+                                "name": "Identifier",
+                                "src": "736:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 52,
+                                  "type": "string memory",
+                                  "value": "pokemonName"
+                                },
+                                "id": 58,
+                                "name": "Identifier",
+                                "src": "746:11:0"
+                              }
+                            ],
+                            "id": 59,
+                            "name": "IndexAccess",
+                            "src": "736:22:0"
+                          }
+                        ],
+                        "id": 60,
+                        "name": "MemberAccess",
+                        "src": "736:28:0"
+                      }
+                    ],
+                    "id": 61,
+                    "name": "Return",
+                    "src": "729:35:0"
+                  }
+                ],
+                "id": 62,
+                "name": "Block",
+                "src": "723:46:0"
+              }
+            ],
+            "id": 63,
+            "name": "FunctionDefinition",
+            "src": "654:115:0"
+          },
+          {
+            "attributes": {
+              "functionSelector": "58f9ab54",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getOwned",
+              "overrides": null,
+              "scope": 78,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": "Obtener al dueño"
+                },
+                "id": 64,
+                "name": "StructuredDocumentation",
+                "src": "773:20:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "pokemonName",
+                      "overrides": null,
+                      "scope": 77,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 65,
+                        "name": "ElementaryTypeName",
+                        "src": "814:6:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "VariableDeclaration",
+                    "src": "814:25:0"
+                  }
+                ],
+                "id": 67,
+                "name": "ParameterList",
+                "src": "813:27:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 77,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 68,
+                        "name": "ElementaryTypeName",
+                        "src": "861:7:0"
+                      }
+                    ],
+                    "id": 69,
+                    "name": "VariableDeclaration",
+                    "src": "861:7:0"
+                  }
+                ],
+                "id": 70,
+                "name": "ParameterList",
+                "src": "860:9:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 70
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "owner",
+                          "referencedDeclaration": 3,
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct PokeCatcher.Owner storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 10,
+                                  "type": "mapping(string memory => struct PokeCatcher.Owner storage ref)",
+                                  "value": "ownership"
+                                },
+                                "id": 71,
+                                "name": "Identifier",
+                                "src": "882:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 66,
+                                  "type": "string memory",
+                                  "value": "pokemonName"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "892:11:0"
+                              }
+                            ],
+                            "id": 73,
+                            "name": "IndexAccess",
+                            "src": "882:22:0"
+                          }
+                        ],
+                        "id": 74,
+                        "name": "MemberAccess",
+                        "src": "882:28:0"
+                      }
+                    ],
+                    "id": 75,
+                    "name": "Return",
+                    "src": "875:35:0"
+                  }
+                ],
+                "id": 76,
+                "name": "Block",
+                "src": "869:46:0"
+              }
+            ],
+            "id": 77,
+            "name": "FunctionDefinition",
+            "src": "796:119:0"
+          }
+        ],
+        "id": 78,
+        "name": "ContractDefinition",
+        "src": "57:860:0"
+      }
+    ],
+    "id": 79,
+    "name": "SourceUnit",
+    "src": "32:886:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xEaC11B3964Ae7E86d008125B268755f9BcB5625A",
+      "transactionHash": "0x7b8e7feef14cf21216f7de34a7f6869e098b5233b36eb812888913ae93c7fd54"
+    }
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-04T21:08:38.226Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "capture(string)": {
+        "notice": "Capturar"
+      },
+      "getOwned(string)": {
+        "notice": "Obtener al dueño"
+      },
+      "isOwned(string)": {
+        "notice": "Verificar si ha sido capturado"
+      }
+    },
+    "version": 1
+  }
+}
